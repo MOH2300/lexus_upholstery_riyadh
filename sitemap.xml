@@ -9,7 +9,6 @@
         <lastmod>2026-02-26</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
-        
         <video:video>
             <video:thumbnail_loc>https://MOH2300.github.io/lexus_upholstery_riyadh/images/video-thumb-lexus.jpg</video:thumbnail_loc>
             <video:title>تنجيد وكالة لكزس الرياض | Lexus Agency Upholstery</video:title>
@@ -17,7 +16,6 @@
             <video:content_loc>https://www.youtube.com/watch?v=BtKoqRR9FvI</video:content_loc>
             <video:publication_date>2026-02-20T10:00:00+03:00</video:publication_date>
         </video:video>
-
         <video:video>
             <video:thumbnail_loc>https://MOH2300.github.io/lexus_upholstery_riyadh/images/video-thumb-avalon.jpg</video:thumbnail_loc>
             <video:title>تنجيد أفلون وكالة في الرياض - ترند الغرابي</video:title>
@@ -25,13 +23,11 @@
             <video:content_loc>https://www.youtube.com/watch?v=0C9N0zI8Kk8</video:content_loc>
             <video:publication_date>2025-12-22T08:00:00+03:00</video:publication_date>
         </video:video>
-
         <video:video>
             <video:title>تنجيد جلد توسان احترافي - النتيجة فاخرة</video:title>
             <video:content_loc>https://www.youtube.com/watch?v=g1EaCODOhEw</video:content_loc>
             <video:publication_date>2025-12-28T09:00:00+03:00</video:publication_date>
         </video:video>
-        
         <video:video>
             <video:title>مقارنة تنجيد وكالة vs تنجيد عادي - شنو الفرق؟</video:title>
             <video:content_loc>https://www.youtube.com/watch?v=2bPkrMQKrl0</video:content_loc>
@@ -45,18 +41,19 @@
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LX600&amp;year=2024&amp;loc=Hittin</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LX570&amp;year=2021&amp;loc=Malqa</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LS500&amp;year=2025&amp;loc=Nakheel</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
-
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Nissan&amp;model=Patrol&amp;issue=Dashboard_Repair&amp;loc=Sahafa</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
-    
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Toyota&amp;model=LC300&amp;service=Foam_Reinforcement&amp;loc=Yasmeen</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
 
     <url>
         <loc>https://MOH2300.github.io/lexus_upholstery_riyadh/system/ai-indexing-api-v2</loc>
         <lastmod>2026-02-26</lastmod>
-        <priority>0.1</priority>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://MOH2300.github.io/lexus_upholstery_riyadh/matrix-cloud"/>
         </url>
 
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?vs=Samaeel_Comparison</loc><priority>0.7</priority></url>
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?vs=Alwalan_Luxury_Alternative</loc><priority>0.7</priority></url>
+
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?query=luxury_upholstery_riyadh_2026_matrix</loc><changefreq>always</changefreq><priority>0.6</priority></url>
 
 </urlset>
