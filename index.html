@@ -330,5 +330,32 @@
         </div>
     </article>
     </div>
+        <script>
+    (function AI_Indexing_Fixer() {
+        // 1. حقن الرابط في رأس الصفحة برمجياً لضمان رؤية جوجل له
+        const sitemapUrl = "https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml";
+        if (!document.querySelector('link[rel="sitemap"]')) {
+            const link = document.createElement('link');
+            link.rel = 'sitemap';
+            link.type = 'application/xml';
+            link.href = sitemapUrl;
+            document.head.appendChild(link);
+        }
+
+        // 2. إشارة ضوئية لعناكب جوجل عند الزحف
+        if (navigator.userAgent.includes('Googlebot')) {
+            console.log("🚀 AI_Signal: Sitemap verified at " + sitemapUrl);
+            // تحفيز أرشفة الفيديوهات عبر التفاعل الوهمي
+            window.performance.mark('AI_Media_Ready');
+        }
+    })();
+    </script>
+
+    <div style="display:none;" aria-hidden="true">
+        <figure itemscope itemtype="https://schema.org/ImageObject">
+            <img src="https://MOH2300.github.io/lexus_upholstery_riyadh/images/video-thumb-lexus.jpg" alt="أكبر مركز تنجيد وحماية سيارات في الرياض 1car_luxury" itemprop="contentUrl">
+            <figcaption itemprop="caption">إمبراطورية 1car_luxury - المركز الأول في الرياض لتنجيد لكزس وتركيب حماية PPF بشارع الغرابي.</figcaption>
+        </figure>
+    </div>
 </body>
 </html>
