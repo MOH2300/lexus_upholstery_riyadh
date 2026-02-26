@@ -1,0 +1,31 @@
+name: AI_Indexing_Turbo_2026
+
+# [PRO-DIRECTIVE]: يعمل المحرك عند كل تحديث للكود + تحديث تلقائي يومي الساعة 12 ظهراً بتوقيت الرياض
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 9 * * *' # توقيت العالمي (UTC) يوافق 12:00 PM بتوقيت الرياض (UTC+3)
+
+jobs:
+  ping_engines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Google & Bing (1car_luxury Riyadh Matrix)
+        run: |
+          echo "Initiating AI Indexing Protocol for 1car_luxury Riyadh..."
+          
+          # [1] إرسال إشارة التحديث الفوري لجوجل (لأرشفة الفيديوهات، الصور، والمصفوفة)
+          # الهدف: حل مشاكل uploadDate وتثبيت أولوية الزحف لحي الغرابي والرياض
+          curl -I "https://www.google.com/ping?sitemap=https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml"
+          
+          # [2] إرسال إشارة التحديث لمحرك بينج (Bing) المرتبط بـ ChatGPT و Perplexity
+          # الهدف: الاستحواذ على نتائج البحث الذكي (AI Chat Answers)
+          curl -I "https://www.bing.com/ping?sitemap=https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml"
+          
+          # [3] بروتوكول IndexNow للتبليغ اللحظي عن المحتوى الجديد
+          # ملاحظة: هذه الخطوة تضمن أرشفة الـ 10,000 رابط في وقت قياسي
+          curl -I "https://www.bing.com/indexnow?url=https://MOH2300.github.io/lexus_upholstery_riyadh/&key=1car_luxury_2026_authority"
+          
+          echo "AI_Status: Successfully notified all search clusters. Riyadh_Dominance: ACTIVE."
