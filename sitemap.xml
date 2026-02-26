@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    <url>
+        <loc>https://lexus-upholstery-riyadh.github.io/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1.0</priority>
+        
+        <video:video>
+            <video:thumbnail_loc>https://lexus-upholstery-riyadh.github.io/images/video-thumb-lexus.jpg</video:thumbnail_loc>
+            <video:title>تنجيد وكالة لكزس الرياض | Lexus Agency Upholstery</video:title>
+            <video:description>شاهد عملية تنجيد لكزس شد وكالة في الرياض بشارع الغرابي. جودة فائقة وضمان ممتد.</video:description>
+            <video:content_loc>https://www.youtube.com/watch?v=BtKoqRR9FvI</video:content_loc>
+            <video:publication_date>2026-02-20T10:00:00+03:00</video:publication_date>
+        </video:video>
+
+        <video:video>
+            <video:thumbnail_loc>https://lexus-upholstery-riyadh.github.io/images/video-thumb-avalon.jpg</video:thumbnail_loc>
+            <video:title>تنجيد أفلون وكالة في الرياض - ترند الغرابي</video:title>
+            <video:description>تنجيد أفلون شد وكالة خامات فخمة وشغل احترافي 1car_luxury.</video:description>
+            <video:content_loc>https://www.youtube.com/watch?v=0C9N0zI8Kk8</video:content_loc>
+            <video:publication_date>2025-12-22T08:00:00+03:00</video:publication_date>
+        </video:video>
+
+        <video:video>
+            <video:title>تنجيد جلد توسان احترافي - النتيجة فاخرة</video:title>
+            <video:content_loc>https://www.youtube.com/watch?v=g1EaCODOhEw</video:content_loc>
+            <video:publication_date>2025-12-28T09:00:00+03:00</video:publication_date>
+        </video:video>
+        
+        <video:video>
+            <video:title>مقارنة تنجيد وكالة vs تنجيد عادي - شنو الفرق؟</video:title>
+            <video:content_loc>https://www.youtube.com/watch?v=2bPkrMQKrl0</video:content_loc>
+            <video:publication_date>2026-01-10T11:00:00+03:00</video:publication_date>
+        </video:video>
+    </url>
+
+    <url><loc>https://lexus-upholstery-riyadh.github.io/#b2b-contract-authority</loc><priority>0.9</priority></url>
+    <url><loc>https://lexus-upholstery-riyadh.github.io/#saudi-search-intent</loc><priority>0.9</priority></url>
+
+</urlset>
+
