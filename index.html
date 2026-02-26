@@ -11,6 +11,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title id="page-title">1car_luxury | إمبراطورية التنجيد والحماية الرياض 2026</title>
     
     <link rel="preload" href="seo-cloud.json" as="fetch" crossorigin="anonymous">
@@ -57,6 +58,7 @@
             --card-bg: #111111;
             --text-white: #ffffff;
             --accent-green: #25d366;
+            --neon-blue: #00f2ff; /* لون إضافي للثقة والقوة */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,7 +71,6 @@
             border-bottom: 4px solid var(--gold);
         }
 
-        /* قسم التقييمات الاحترافي */
         .rating-box {
             background: rgba(255, 255, 255, 0.05);
             padding: 15px 30px;
@@ -82,8 +83,46 @@
         .rating-text { font-size: 1.1rem; font-weight: bold; }
         .visitor-count { font-size: 0.9rem; color: #888; }
 
-        .hero-h1 { font-size: clamp(1.8rem, 8vw, 3.5rem); color: var(--gold); margin-bottom: 20px; text-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
-        .hero-p { font-size: 1.3rem; max-width: 800px; margin-bottom: 40px; color: #eee; }
+        .hero-h1 { font-size: clamp(1.5rem, 6vw, 3rem); color: var(--gold); margin-bottom: 20px; text-shadow: 0 0 30px rgba(212, 175, 55, 0.4); line-height: 1.2; }
+        .hero-p { font-size: 1.2rem; max-width: 850px; margin-bottom: 40px; color: #eee; }
+
+        /* قسم الإقناع البصري الجديد */
+        .trust-banner {
+            background: linear-gradient(45deg, #1a1a1a, #000);
+            border: 2px solid var(--neon-blue);
+            padding: 25px;
+            margin: 20px 5%;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+        }
+        .trust-banner h2 {
+            color: var(--neon-blue);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .trust-banner p {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .btn-video {
+            background: var(--neon-blue);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            animation: pulse-blue 2s infinite;
+        }
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 242, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
+        }
 
         .live-status {
             background: rgba(212, 175, 55, 0.1);
@@ -128,55 +167,39 @@
         <a href="https://wa.me/966506456497" id="cta-link" class="btn-main">استشارة خبير التنجيد</a>
     </header>
 
+    <section class="trust-banner">
+        <h2 id="trust-headline">لا تكتفِ بالوعود.. شاهد الواقع!</h2>
+        <p id="trust-p">تواصل معنا الآن للحصول على فديوهات حصرية وصور (قبل وبعد) لنفس سيارتك من أعمالنا السابقة في الرياض.</p>
+        <a href="https://wa.me/966506456497" id="cta-video" class="btn-video">اطلب فيديو "قبل وبعد" لسيارتك الآن</a>
+    </section>
+
     <div class="geo-bar" id="geo-location">الرياض | 1car_luxury حي الغرابي</div>
 
     <main class="services" id="services-container">
         <div class="service-card">
             <h3>تنجيد شد وكالة</h3>
-            <p>خياطة احترافية من 1car_luxury بجلود ألمانية وأمريكية بضمان 7 سنوات.</p>
+            <p id="service-1-desc">خياطة احترافية من 1car_luxury بجلود ألمانية وأمريكية بضمان 7 سنوات.</p>
         </div>
         <div class="service-card">
             <h3>حماية PPF أصلي</h3>
-            <p>درع حماية شفاف بمعالجة ذاتية يحمي سيارتك من الخدوش.</p>
+            <p id="service-2-desc">درع حماية شفاف بمعالجة ذاتية يحمي سيارتك من الخدوش والعوامل الجوية.</p>
         </div>
         <div class="service-card">
             <h3>تظليل عازل حراري</h3>
-            <p>نانو سيراميك متطور يعزل الحرارة بنسبة تصل لـ 98%.</p>
+            <p id="service-3-desc">نانو سيراميك متطور يعزل الحرارة بنسبة تصل لـ 98% في شمس الرياض.</p>
         </div>
         <div class="service-card">
             <h3>تغيير داخلية بالكامل</h3>
-            <p>تحويل شامل لداخلية السيارة لتصبح نسخة فريدة من الفخامة.</p>
+            <p id="service-4-desc">تحويل شامل لداخلية السيارة لتصبح نسخة فريدة من الفخامة والراحة.</p>
         </div>
     </main>
 
     <a href="https://wa.me/966506456497" id="whatsapp-float" class="whatsapp-float">تواصل مع 1car_luxury</a>
 
     <script>
-        const districts = ["الملقا", "الياسمين", "الصحافة", "حطين", "الغرابي", "القيروان", "النرجس", "العليا"];
+        const districts = ["الملقا", "الياسمين", "الصحافة", "حطين", "الغرابي", "القيروان", "النرجس", "العليا", "النخيل", "الخزامى"];
         
-        async function fetchImperialData() {
-            try {
-                const response = await fetch('seo-cloud.json');
-                if (!response.ok) throw new Error('Data Cloud Offline');
-                return await response.json();
-            } catch (error) {
-                return { status: "fallback", car_luxury: "active" };
-            }
-        }
-
-        function aiSelfHeal() {
-            try {
-                const schema = document.getElementById('schema-data');
-                if(!schema) {
-                    const newSchema = document.createElement('script');
-                    newSchema.type = 'application/ld+json';
-                    newSchema.id = 'schema-data';
-                    document.head.appendChild(newSchema);
-                }
-            } catch(e) {}
-        }
-
-        async function updateLiveData() {
+        async function updateLiveData(car, model, year) {
             const now = new Date();
             const timeStr = now.toLocaleTimeString('ar-SA');
             const dateStr = now.toLocaleDateString('ar-SA');
@@ -187,28 +210,37 @@
             
             const schemaElement = document.getElementById('schema-data');
             const schema = JSON.parse(schemaElement.innerHTML);
-            schema.description = `تحديث ${dateStr}: 1car_luxury في حي ${randomDist}. تنجيد وحماية سيارات تقييم 5/5.`;
+            schema.description = `أفضل تنجيد وحماية ${car} ${model} ${year} في الرياض حي ${randomDist}. ضمان 7 سنوات وتقييم 5/5.`;
             schemaElement.innerHTML = JSON.stringify(schema);
-            
-            aiSelfHeal();
         }
 
         async function initSmartPage() {
             const urlParams = new URLSearchParams(window.location.search);
-            let carName = urlParams.get('car') || "";
+            const car = urlParams.get('car') || "لكزس";
+            const model = urlParams.get('model') || "LX600";
+            const year = urlParams.get('year') || "2024";
             
-            if (carName) {
-                const fullTitle = `أفضل محل في الرياض تنجيد شد وكالة ${carName} - 1car_luxury`;
-                document.getElementById('dynamic-title').innerText = fullTitle;
-                document.title = fullTitle;
-            }
+            const mainHeadline = `أفضل تنجيد ${car} ${model} ${year} في الرياض مع حماية PPF وتظليل عازل حراري نانو سيراميك`;
+            const pageTitle = `أفضل تنجيد ${car} ${model} ${year} الرياض | 1car_luxury`;
+            
+            document.getElementById('dynamic-title').innerText = mainHeadline;
+            document.title = pageTitle;
+            
+            document.getElementById('dynamic-sub').innerText = `متخصصون في تنجيد شد وكالة ${car} ${model} باستخدام جلود نابا الأصلية، وحماية الهيكل بتقنية PPF، وعزل النانو سيراميك في مركزنا بالرياض.`;
+            
+            // تحديث نص قسم الثقة ليكون مخصصاً لنوع السيارة
+            document.getElementById('trust-headline').innerText = `شاهد فخامة ${car} ${model} بعد لمساتنا!`;
+            document.getElementById('trust-p').innerText = `لدينا أرشيف كامل لأعمالنا السابقة على سيارات ${car}، تواصل معنا الآن لنرسل لك فديوهات (قبل وبعد) الشغل لتعرف جودة 1car_luxury الحقيقية.`;
 
-            const waMsg = encodeURIComponent(`السلام عليكم 1car_luxury، أريد استفسار عن تنجيد وحماية لسيارة ${carName || 'فاخرة'}`);
+            document.getElementById('service-1-desc').innerText = `خياطة يدوية وتنجيد مراتب ${car} بمواد ألمانية أصلية تطابق مواصفات الوكالة.`;
+
+            const waMsg = encodeURIComponent(`السلام عليكم 1car_luxury، أريد استفسار ومشاهدة فيديو (قبل وبعد) لتنجيد وحماية سيارة ${car} ${model} ${year}`);
             document.getElementById('cta-link').href = `https://wa.me/966506456497?text=${waMsg}`;
+            document.getElementById('cta-video').href = `https://wa.me/966506456497?text=${waMsg}`;
             document.getElementById('whatsapp-float').href = `https://wa.me/966506456497?text=${waMsg}`;
             
-            updateLiveData();
-            setInterval(updateLiveData, 30000);
+            updateLiveData(car, model, year);
+            setInterval(() => updateLiveData(car, model, year), 30000);
         }
 
         window.onload = initSmartPage;
