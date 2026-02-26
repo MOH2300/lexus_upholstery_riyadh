@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HEHPS6FP47"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -166,7 +168,7 @@
           "name": "تنجيد لكزس بعد التنجيد.. النتيجة صادمة",
           "description": "أفضل مركز تنجيد لكزس في الرياض (شارع الغرابي). متخصصون في إعادة سيارتك لحالة الوكالة.",
           "thumbnailUrl": "https://i.ytimg.com/vi/BtKoqRR9FvI/hqdefault.jpg",
-          "uploadDate": "2026-02-20",
+          "uploadDate": "2026-02-20T10:00:00+03:00",
           "contentUrl": "https://www.youtube.com/watch?v=BtKoqRR9FvI"
         },
         {
@@ -174,7 +176,7 @@
           "name": "تنجيد جلد توسان احترافي",
           "description": "تنجيد جلد فاخر لسيارات هيونداي توسان في الرياض.",
           "thumbnailUrl": "https://i.ytimg.com/vi/g1EaCODOhEw/hqdefault.jpg",
-          "uploadDate": "2025-12-28",
+          "uploadDate": "2025-12-28T14:00:00+03:00",
           "contentUrl": "https://www.youtube.com/watch?v=g1EaCODOhEw"
         }
       ]
@@ -248,7 +250,6 @@
         }
 
         function generateAICloud() {
-            // كود حقن الـ 10,000 كيان دلالي للعناكب
             if (navigator.userAgent.includes('Googlebot') || navigator.userAgent.includes('Gemini')) {
                 const cars = ['Lexus', 'Patrol', 'LandCruiser', 'Mercedes', 'Tahoe', 'Avalon'];
                 const services = ['تنجيد', 'حماية_PPF', 'نانو_سيراميك', 'تظليل'];
@@ -330,23 +331,19 @@
         </div>
     </article>
     </div>
-        <script>
-    (function AI_Indexing_Fixer() {
-        // 1. حقن الرابط في رأس الصفحة برمجياً لضمان رؤية جوجل له
-        const sitemapUrl = "https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml";
-        if (!document.querySelector('link[rel="sitemap"]')) {
-            const link = document.createElement('link');
-            link.rel = 'sitemap';
-            link.type = 'application/xml';
-            link.href = sitemapUrl;
-            document.head.appendChild(link);
-        }
 
-        // 2. إشارة ضوئية لعناكب جوجل عند الزحف
-        if (navigator.userAgent.includes('Googlebot')) {
-            console.log("🚀 AI_Signal: Sitemap verified at " + sitemapUrl);
-            // تحفيز أرشفة الفيديوهات عبر التفاعل الوهمي
-            window.performance.mark('AI_Media_Ready');
+    <script>
+    (function AI_Sitemap_Bridge() {
+        const smUrl = "https://MOH2300.github.io/lexus_upholstery_riyadh/sitemap.xml";
+        // 1. حقن الرابط الميكانيكي فوراً
+        if (!document.querySelector('link[rel="sitemap"]')) {
+            const l = document.createElement('link'); l.rel = 'sitemap'; l.type = 'application/xml'; l.href = smUrl;
+            document.head.appendChild(l);
+        }
+        // 2. إجبار البوت على رؤية الخريطة
+        if (/Googlebot|Gemini|bingbot/i.test(navigator.userAgent)) {
+            window.performance.mark('sitemap-attached');
+            fetch(smUrl).then(r => console.log("Sitemap Indexed")).catch(e => {});
         }
     })();
     </script>
