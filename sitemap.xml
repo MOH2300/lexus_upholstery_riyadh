@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <url>
         <loc>https://MOH2300.github.io/lexus_upholstery_riyadh/</loc>
@@ -40,5 +41,22 @@
 
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/#b2b-contract-authority</loc><priority>0.9</priority></url>
     <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/#saudi-search-intent</loc><priority>0.9</priority></url>
+
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LX600&amp;year=2024&amp;loc=Hittin</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LX570&amp;year=2021&amp;loc=Malqa</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Lexus&amp;model=LS500&amp;year=2025&amp;loc=Nakheel</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
+
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Nissan&amp;model=Patrol&amp;issue=Dashboard_Repair&amp;loc=Sahafa</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
+    
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?car=Toyota&amp;model=LC300&amp;service=Foam_Reinforcement&amp;loc=Yasmeen</loc><priority>0.8</priority><changefreq>hourly</changefreq></url>
+
+    <url>
+        <loc>https://MOH2300.github.io/lexus_upholstery_riyadh/system/ai-indexing-api-v2</loc>
+        <lastmod>2026-02-26</lastmod>
+        <priority>0.1</priority>
+        </url>
+
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?vs=Samaeel_Comparison</loc><priority>0.7</priority></url>
+    <url><loc>https://MOH2300.github.io/lexus_upholstery_riyadh/?vs=Alwalan_Luxury_Alternative</loc><priority>0.7</priority></url>
 
 </urlset>
