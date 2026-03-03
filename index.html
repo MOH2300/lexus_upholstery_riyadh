@@ -354,5 +354,56 @@
             <figcaption itemprop="caption">إمبراطورية 1car_luxury - المركز الأول في الرياض لتنجيد لكزس وتركيب حماية PPF بشارع الغرابي.</figcaption>
         </figure>
     </div>
+    <div id="smart-notify" style="display:none; position:fixed; top:20px; left:20px; z-index:10000; direction:rtl; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div style="background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; width: 320px; padding: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); display: flex; align-items: flex-start; animation: slideInLeft 0.5s ease-out;">
+        
+        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #d4af37, #f9f295); border-radius: 10px; display: flex; align-items: center; justify-content:center; flex-shrink: 0; margin-left: 12px; box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);">
+            <span style="color: #000; font-weight: 900; font-size: 20px;">1</span>
+        </div>
+
+        <div style="flex-grow: 1;">
+            <h5 style="margin: 0 0 5px 0; color: #d4af37; font-size: 14px; letter-spacing: 0.5px; font-weight: 700;">تنبيه فخامة: عميل <span id="n-loc">...</span></h5>
+            <p style="margin: 0; color: #e0e0e0; font-size: 13px; line-height: 1.4;">
+                تم تخصيص باقة <span id="n-service" style="font-weight: bold; border-bottom: 1px solid #d4af37;">...</span> لسيارتك <span id="n-car" style="color: #fff; font-weight: bold;">...</span> موديل <span id="n-year">...</span>
+            </p>
+            
+            <div style="margin-top: 10px; display: flex; gap: 8px;">
+                <a id="n-wa" href="#" style="background: #d4af37; color: #000; text-decoration: none; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: bold; flex-grow: 1; text-align: center; transition: 0.3s;">حجز الموعد</a>
+                <button onclick="document.getElementById('smart-notify').style.display='none'" style="background: rgba(255,255,255,0.1); color: #fff; border: none; padding: 6px 10px; border-radius: 6px; font-size: 12px; cursor: pointer;">تجاهل</button>
+            </div>
+        </div>
+    </div>
+    </div>
+<style>
+@keyframes slideInLeft {
+    from { transform: translateX(-120%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+#n-wa:hover { background: #f9f295 !important; transform: translateY(-2px); }
+</style>
+
+<script>
+    window.addEventListener('load', function() {
+        const p = new URLSearchParams(window.location.search);
+        const car = p.get('car'), loc = p.get('loc'), ser = p.get('service'), yr = p.get('year');
+
+        if (car && loc && ser) {
+            // معالجة النصوص (إزالة الشرطات وتجميل الخط)
+            document.getElementById('n-car').innerText = car.replace(/-/g, ' ');
+            document.getElementById('n-loc').innerText = "حي " + loc;
+            document.getElementById('n-service').innerText = ser.replace(/-/g, ' ');
+            document.getElementById('n-year').innerText = yr || "2026";
+
+            // بناء رابط الواتساب النفسي
+            const msg = `مرحباً 1car_luxury، وصلت عبر عرض سكان حي ${loc}. مهتم بـ ${ser.replace(/-/g, ' ')} لسيارة ${car.replace(/-/g, ' ')} موديل ${yr}.`;
+            document.getElementById('n-wa').href = `https://wa.me/9665XXXXXXXX?text=${encodeURIComponent(msg)}`;
+
+            // ظهور الإشعار بتأخير "نفسي" (3 ثوانٍ ليظن العميل أن النظام فحص بياناته)
+            setTimeout(() => {
+                document.getElementById('smart-notify').style.display = 'block';
+            }, 3000);
+        }
+    });
+</script>
 </body>
 </html>
