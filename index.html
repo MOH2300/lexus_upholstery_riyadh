@@ -582,39 +582,6 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('ai-deep-content').innerHTML = `<p>مقارنة بـ ${v}، نحن نقدم أرخص أسعار ${s} لسيارات ${c} بضمان 2026.</p>`;
         });
     </script>
-
-    <script>
-        (function() {
-            const params = new URLSearchParams(window.location.search);
-            const competitor = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : '';
-            
-            window.addEventListener('DOMContentLoaded', () => {
-                // تأخير 100 ملي ثانية لضمان اكتمال بناء الصفحة قبل التطهير
-                setTimeout(() => {
-                    const aiContentArea = document.getElementById('ai-content');
-                    const deepContentArea = document.getElementById('ai-deep-content');
-                    
-                    const sanitize = (text) => {
-                        if (!text || !competitor) return text;
-                        const genericTerms = ["المراكز المتخصصة", "المنافسين", "باقي الورش"];
-                        const randomTerm = genericTerms[Math.floor(Math.random() * genericTerms.length)];
-                        
-                        return text.split(competitor).join(`<strong style="color:#d4af37;">${randomTerm}</strong>`);
-                    };
-
-                    if (aiContentArea) aiContentArea.innerHTML = sanitize(aiContentArea.innerHTML);
-                    if (deepContentArea) deepContentArea.innerHTML = sanitize(deepContentArea.innerHTML);
-                    
-                    document.querySelectorAll('h1, h2, h3').forEach(el => {
-                        if (el.innerText.includes(competitor)) {
-                            el.innerText = el.innerText.replace(competitor, "بأعلى معايير الجودة");
-                        }
-                    });
-                    console.log("👻 تم تفعيل كود الشبح: إخفاء المنافسين بنجاح.");
-                }, 100); 
-            });
-        })();
-    </script>
 </body>
 </html> 
 </body>
