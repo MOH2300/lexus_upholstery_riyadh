@@ -567,21 +567,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 }).catch(e => console.log("⏳ بانتظار رفع ملف seo-cloud.json..."));
         });
     </script>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const s = params.get('service') ? params.get('service').replaceAll('-', ' ') : 'تنجيد سيارات';
-            const c = params.get('car') ? params.get('car').replaceAll('-', ' ') : 'فخمة';
-            const l = params.get('loc') ? params.get('loc').replaceAll('-', ' ') : 'الرياض';
-            const v = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : 'المنافسين';
-
-            // تعبئة البيانات (مثال مبسط، سيتم إخفاء المنافس منه في الخطوة التالية)
-            document.getElementById('h1-title').innerText = `${s} ${c}`;
-            document.getElementById('ai-content').innerHTML = `<p>أفضل خدمة ${s} في ${l}، بجودة تتفوق على ${v}.</p>`;
-            document.getElementById('ai-deep-content').innerHTML = `<p>مقارنة بـ ${v}، نحن نقدم أرخص أسعار ${s} لسيارات ${c} بضمان 2026.</p>`;
-        });
-    </script>
 </body>
 </html> 
 </body>
