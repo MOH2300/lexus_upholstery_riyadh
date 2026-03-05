@@ -62,3 +62,29 @@ Allow: /
 # [RIYADH_GEO_SIGNAL]: إشارة التمركز الجغرافي
 # Location: Riyadh, Saudi Arabia | District: Al-Gharabi
 # Operation_Radius: 50km (Covering Malqa, Hittin, Sahafa, Yasmeen)
+# --------------------------------------------------
+# Advanced SEO Routing for 1car_luxury - Riyadh 2026
+# --------------------------------------------------
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /seo-cloud.json
+
+# إعطاء أولوية قصوى لروابط السحابة المتغيرة
+Allow: /*?service=*
+Allow: /*?loc=*
+Allow: /*?car=*
+
+# منع العناكب من أرشفة الصور المعطلة أو الملفات المؤقتة لزيادة الـ Crawl Budget
+Disallow: /images/temp/
+Disallow: /cache/
+Disallow: /error/
+
+# توجيه العناكب مباشرة لملف السحابة الذكي
+Sitemap: https://moh2300.github.io/lexus_upholstery_riyadh/seo-cloud.json
+
+# تعليمات خاصة بمحرك بحث جوجل لزيادة سرعة الزحف
+User-agent: Googlebot
+Crawl-delay: 0
+
