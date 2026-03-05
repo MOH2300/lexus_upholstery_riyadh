@@ -759,39 +759,5 @@ AITurbo.init();
     });
 })();
     </script>
-    <script>
-async function injectSmartCloud() {
-    try {
-        // استخدام المعالج السريع الذي صنعناه سابقاً
-        const data = await AITurbo.fetchFastData('seo-cloud.json');
-        const mesh = document.getElementById('seo-mesh');
-        
-        // ذكاء اصطناعي لاختيار أفضل الروابط بناءً على الـ Priority
-        const topLinks = data.links
-            .sort((a, b) => b.priority - a.priority)
-            .slice(0, 400); // زيادة العدد لـ 400 لرفع كثافة الأرشفة
-
-        topLinks.forEach(item => {
-            const a = document.createElement('a');
-            a.href = item.url;
-            a.title = item.title;
-            a.innerText = item.title;
-            a.rel = "next"; // إشارة لجوجل أن هذه الصفحة هي "التالية" في هيكل الموقع
-            
-            // إضافة كلمات مفتاحية مخفية داخل خصائص الرابط (Metadata)
-            if(item.tags) a.setAttribute('data-keywords', item.tags.join(','));
-            
-            mesh.appendChild(a);
-        });
-
-        console.log("🚀 تم حقن 400 كيان ذكي في هيكل الصفحة.");
-    } catch (e) {
-        console.warn("AI Cloud Injector: Waiting for JSON file...");
-    }
-}
-
-window.addEventListener('load', injectSmartCloud);
-                 
-    </script>
 </body>
 </html>
