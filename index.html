@@ -492,5 +492,130 @@ window.addEventListener('DOMContentLoaded', () => {
         }).catch(e => console.log("Cloud waiting for data..."));
 });
     </script>
+    <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1car_luxury - الرياض</title>
+</head>
+<body>
+
+    <div class="card">
+        <h1 id="h1-title">جاري تحميل بيانات الخدمة...</h1>
+        <div id="ai-content"></div>
+        <div id="image-container">
+            <img src="images/default.jpg" id="dynamic-img" alt="تنجيد الرياض">
+        </div>
+        <div id="ai-deep-content"></div>
+    </div>
+
+    <div id="seo-mesh" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"></div>
+
+    <script>
+        // نظام الحماية الذاتي: منع ظهور أخطاء برمجية قد تطرد عناكب البحث
+        window.onerror = function() { return true; };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const s = params.get('service') ? params.get('service').replaceAll('-', ' ') : 'تنجيد سيارات';
+            const c = params.get('car') ? params.get('car').replaceAll('-', ' ') : 'فخمة';
+            const l = params.get('loc') ? params.get('loc').replaceAll('-', ' ') : 'الرياض';
+            const v = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : 'المنافسين';
+            
+            // 1. المعالج الذكي للصور (AI Auto-Fixer)
+            document.querySelectorAll('img').forEach(img => {
+                img.onerror = function() {
+                    this.src = 'https://via.placeholder.com/800x400/111/d4af37?text=1car_luxury+Riyadh'; 
+                    console.log("🛠️ تم معالجة صورة مفقودة لمنع ارتداد العناكب.");
+                };
+            });
+
+            // 2. إرسال معلومات قوية لجوجل لأرشفة الكيان (Dynamic Schema Markup)
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "AutoBodyShop",
+                "name": `مركز ون كار لاكجري لخدمات ${s}`,
+                "areaServed": { "@type": "City", "name": l },
+                "description": `أفضل ${s} لسيارات ${c} في ${l}، نتفوق على ${v} بالضمان والجودة.`,
+                "brand": "1car_luxury",
+                "telephone": "+966500000000" // ضع رقمك هنا
+            };
+            const scriptSchema = document.createElement('script');
+            scriptSchema.type = 'application/ld+json';
+            scriptSchema.text = JSON.stringify(schemaData);
+            document.head.appendChild(scriptSchema);
+
+            // 3. محرك تحرير سحابة العناكب (SEO Cloud Liberator)
+            fetch('seo-cloud.json')
+                .then(response => {
+                    if(!response.ok) throw new Error("Cloud missing");
+                    return response.json();
+                })
+                .then(data => {
+                    const mesh = document.getElementById('seo-mesh');
+                    // ضخ 300 رابط عشوائي في كل زيارة لضمان أرشفة الـ 40,000 رابط بالتدريج
+                    const randomLinks = data.links.sort(() => 0.5 - Math.random()).slice(0, 300);
+                    randomLinks.forEach(link => {
+                        const a = document.createElement('a');
+                        a.href = link.url;
+                        a.innerText = link.title;
+                        a.rel = "follow";
+                        mesh.appendChild(a);
+                    });
+                    console.log("🕸️ تم تلقيم عناكب البحث بـ 300 رابط سري.");
+                }).catch(e => console.log("⏳ بانتظار رفع ملف seo-cloud.json..."));
+        });
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const s = params.get('service') ? params.get('service').replaceAll('-', ' ') : 'تنجيد سيارات';
+            const c = params.get('car') ? params.get('car').replaceAll('-', ' ') : 'فخمة';
+            const l = params.get('loc') ? params.get('loc').replaceAll('-', ' ') : 'الرياض';
+            const v = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : 'المنافسين';
+
+            // تعبئة البيانات (مثال مبسط، سيتم إخفاء المنافس منه في الخطوة التالية)
+            document.getElementById('h1-title').innerText = `${s} ${c}`;
+            document.getElementById('ai-content').innerHTML = `<p>أفضل خدمة ${s} في ${l}، بجودة تتفوق على ${v}.</p>`;
+            document.getElementById('ai-deep-content').innerHTML = `<p>مقارنة بـ ${v}، نحن نقدم أرخص أسعار ${s} لسيارات ${c} بضمان 2026.</p>`;
+        });
+    </script>
+
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const competitor = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : '';
+            
+            window.addEventListener('DOMContentLoaded', () => {
+                // تأخير 100 ملي ثانية لضمان اكتمال بناء الصفحة قبل التطهير
+                setTimeout(() => {
+                    const aiContentArea = document.getElementById('ai-content');
+                    const deepContentArea = document.getElementById('ai-deep-content');
+                    
+                    const sanitize = (text) => {
+                        if (!text || !competitor) return text;
+                        const genericTerms = ["المراكز المتخصصة", "المنافسين", "باقي الورش"];
+                        const randomTerm = genericTerms[Math.floor(Math.random() * genericTerms.length)];
+                        
+                        return text.split(competitor).join(`<strong style="color:#d4af37;">${randomTerm}</strong>`);
+                    };
+
+                    if (aiContentArea) aiContentArea.innerHTML = sanitize(aiContentArea.innerHTML);
+                    if (deepContentArea) deepContentArea.innerHTML = sanitize(deepContentArea.innerHTML);
+                    
+                    document.querySelectorAll('h1, h2, h3').forEach(el => {
+                        if (el.innerText.includes(competitor)) {
+                            el.innerText = el.innerText.replace(competitor, "بأعلى معايير الجودة");
+                        }
+                    });
+                    console.log("👻 تم تفعيل كود الشبح: إخفاء المنافسين بنجاح.");
+                }, 100); 
+            });
+        })();
+    </script>
+</body>
+</html>
 </body>
 </html>
