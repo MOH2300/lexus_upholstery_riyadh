@@ -435,5 +435,62 @@
     .deep-seo-box h3 { color: #d4af37; margin-bottom: 15px; }
     .tech-specs { display: grid; grid-template-columns: 1 white; gap: 10px; margin-top: 20px; font-size: 0.85em; opacity: 0.7; }
 </style>
+    <script>
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const s = params.get('service') ? params.get('service').replaceAll('-', ' ') : 'تنجيد سيارات';
+    const c = params.get('car') ? params.get('car').replaceAll('-', ' ') : 'فخمة';
+    const l = params.get('loc') ? params.get('loc').replaceAll('-', ' ') : 'الرياض';
+    const v = params.get('vs') ? params.get('vs').replaceAll('-', ' ') : 'المنافسين';
+    const id = params.get('id') || '2026';
+
+    // مصفوفة "النصوص الذهبية" - خبير الكوبي رايت
+    const deepArticles = [
+        {
+            h3: `دليل التميز: لماذا نعتبر أفضل مركز ${s} في ${l}؟`,
+            p: `إذا كنت تبحث عن <strong>أفضل فني ${s} بالرياض</strong> يمنح سيارتك <strong>${c}</strong> لمسة الفخامة التي تستحقها، فإننا في فرع <strong>${l}</strong> نقدم لك الحل النهائي. نحن نتفوق في <strong>أسعار ${s}</strong> وجودة <strong>تنجيد الوكالة</strong>، مما يجعلنا الخيار الأول مقارنة بـ <strong>${v}</strong>. نستخدم تقنيات متطورة في <strong>خياطة الطارات</strong> و<strong>عزل الأرضيات</strong> لضمان تحمل مناخ الرياض القاسي.`
+        },
+        {
+            h3: `احترافية بلا حدود في خدمات ${s} و ${c} بمناطق ${l}`,
+            p: `تعتبر سيارة <strong>${c}</strong> رمزاً للرفاهية، وللحفاظ عليها، نوفر في <strong>${l}</strong> خدمات <strong>حماية PPF</strong> و <strong>تنجيد مراتب</strong> بخامات ألمانية أصلية. بينما يقدم <strong>${v}</strong> خدمات تقليدية، نضمن لك في ون كار لاكجري <strong>أرخص أسعار تنجيد سيارات الرياض</strong> مع ضمان ممتد حتى 2026، مما يعزز من قيمة سيارتك عند البيع.`
+        }
+    ];
+
+    const pick = deepArticles[parseInt(id) % deepArticles.length];
+
+    // 1. حقن النص الاحترافي في الأسفل
+    const footerContent = `
+        <div id="expert-seo-footer" style="text-align: right; padding: 40px 20px; background: #080808; border-top: 2px solid #d4af37; margin-top: 50px; font-family: sans-serif;">
+            <h3 style="color: #d4af37; font-size: 1.6em; margin-bottom: 15px;">${pick.h3}</h3>
+            <p style="color: #ccc; line-height: 2; font-size: 1.1em; margin-bottom: 20px;">${pick.p}</p>
+            
+            <div style="background: #111; padding: 15px; border-radius: 8px; font-size: 0.9em; color: #777; border: 1px solid #222;">
+                <strong>الكلمات الأكثر بحثاً الآن:</strong> 
+                <span>تنجيد سيارات الرياض الملقا</span> | <span>أسعار حماية PPF</span> | <span>فني تنجيد وكالة</span> | <span>تلميع سيارات شمال الرياض</span> | <span>1car_luxury</span>
+            </div>
+            
+            <div id="seo-mesh" style="opacity: 0.01; height: 1px; overflow: hidden;">
+                </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', footerContent);
+
+    // 2. محرك تحرير السحابة (seo-cloud.json) - أرشفة جبارة
+    fetch('seo-cloud.json')
+        .then(response => response.json())
+        .then(data => {
+            const mesh = document.getElementById('seo-mesh');
+            // حقن عشوائي لـ 400 رابط في كل زيارة لتحفيز الزحف الدائم
+            const shuffle = data.links.sort(() => 0.5 - Math.random()).slice(0, 400);
+            shuffle.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.url;
+                a.innerText = link.title;
+                mesh.appendChild(a);
+            });
+            console.log("🚀 بوابة السحابة مفتوحة للعناكب...");
+        }).catch(e => console.log("Cloud waiting for data..."));
+});
+    </script>
 </body>
 </html>
