@@ -743,5 +743,21 @@ const AITurbo = {
 // تفعيل المعالج فور فتح الصفحة
 AITurbo.init();
     </script>
+    <script>
+// محرك "تحفيز العناكب" - AI Indexing Trigger
+(function() {
+    window.addEventListener('load', () => {
+        if (navigator.userAgent.includes('Googlebot') || navigator.userAgent.includes('bingbot')) {
+            console.log("🤖 رصد عنكبوت بحث: تفعيل وضع التلقيم المكثف...");
+            // زيادة عدد الروابط المعروضة للعنكبوت فقط لضمان الأرشفة السريعة
+            const mesh = document.getElementById('seo-mesh');
+            if (mesh) {
+                mesh.style.display = 'block'; // التأكد من رؤية العنكبوت للروابط
+                mesh.style.opacity = '1';
+            }
+        }
+    });
+})();
+    </script>
 </body>
 </html>
